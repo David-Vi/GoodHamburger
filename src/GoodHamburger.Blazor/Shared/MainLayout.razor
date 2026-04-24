@@ -1,0 +1,18 @@
+@inherits LayoutComponentBase
+
+<div class="app-shell">
+    <nav class="sidebar">
+        <div class="brand">
+            <span class="brand-icon">🍔</span>
+            <span class="brand-name">Good Hamburger</span>
+        </div>
+        <ul class="nav-links">
+            <li><NavLink href="" Match="NavLinkMatch.All">📋 Cardápio</NavLink></li>
+            <li><NavLink href="pedidos">🗒️ Pedidos</NavLink></li>
+            <li><NavLink href="novo-pedido">➕ Novo Pedido</NavLink></li>
+        </ul>
+    </nav>
+    <main class="content">
+        @Body
+    </main>
+</div>
