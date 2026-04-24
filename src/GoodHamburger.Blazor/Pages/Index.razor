@@ -1,0 +1,92 @@
+@page "/"
+@inject GoodHamburger.Blazor.Services.IApiService Api
+
+<PageTitle>Cardápio — Good Hamburger</PageTitle>
+
+<div class="page-header">
+    <h1>Cardápio</h1>
+    <p class="subtitle">Escolha seus itens e monte o seu combo</p>
+</div>
+
+@if (_loading)
+{
+    <div class="loading">Carregando cardápio...</div>
+}
+else if (_error is not null)
+{
+    <div class="alert alert-error">@_error</div>
+}
+else
+{
+    <div class="menu-sections">
+        <section class="menu-section">
+            <h2>🥪 Sanduíches</h2>
+            <div class="menu-grid">
+                @foreach (var item in _menu.Where(i => i.Category == "Sandwich"))
+                {
+                    <div class="menu-card">
+                        <span class="item-name">@item.Name</span>
+                        <span class="item-price">R$ @item.Price.ToString("F2")</span>
+                    </div>
+                }
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>🍟 Acompanhamentos</h2>
+            <div class="menu-grid">
+                @foreach (var item in _menu.Where(i => i.Category == "SideDish"))
+                {
+                    <div class="menu-card">
+                        <span class="item-name">@item.Name</span>
+                        <span class="item-price">R$ @item.Price.ToString("F2")</span>
+                    </div>
+                }
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>🥤 Bebidas</h2>
+            <div class="menu-grid">
+                @foreach (var item in _menu.Where(i => i.Category == "Drink"))
+                {
+                    <div class="menu-card">
+                        <span class="item-name">@item.Name</span>
+                        <span class="item-price">R$ @item.Price.ToString("F2")</span>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+
+    <div class="discount-info">
+        <h2>🏷️ Descontos</h2>
+        <ul>
+            <li><strong>20%</strong> — Sanduíche + Batata Frita + Refrigerante</li>
+            <li><strong>15%</strong> — Sanduíche + Refrigerante</li>
+            <li><strong>10%</strong> — Sanduíche + Batata Frita</li>
+        </ul>
+    </div>
+}
+
+@code {
+    private List<GoodHamburger.Blazor.Services.MenuItemDto> _menu = new();
+    private bool _loading = true;
+    private string? _error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _menu = await Api.GetMenuAsync();
+        }
+        catch (Exception ex)
+        {
+            _error = $"Não foi possível carregar o cardápio: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+}
