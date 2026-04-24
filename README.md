@@ -317,5 +317,5 @@ Por ser um desafio técnico com escopo definido, as seguintes funcionalidades fo
    
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAM0lEQVR4nO3OMQ0AIAwAwZKQ6kBqjSAOJywYYCIkd9OP36pqRMQMAAB+sfqJfLoBAMCN3NYoAzBA+QG0AAAAAElFTkSuQmCC)  
 **👤 Autor** **: David Viegas Mateus**  
-Desenvolvido como desafio técnico para a vaga de Desenvolvedor C#.  
+Desenvolvido como desafio técnico C#.  
 # GoodHamburger
