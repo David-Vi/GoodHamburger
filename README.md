@@ -15,8 +15,6 @@ Sistema completo para gerenciamento de pedidos da lanchonete **Good Hamburger**,
 - [Material para Aula](#anchor-11 "#anchor-11")  
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANElEQVR4nO3OQQmAABRAsSdYxKa/i8WMIR7ECt5E2BJsmZmt2gMA4C+Otbqr8+sJAACvXQ85PAYartXEogAAAABJRU5ErkJggg==)  
 **✅ Funcionalidades**  
-| | |  
-|-|-|  
 | **Requisito** | **Status** |   
 | API REST CRUD de pedidos | ✅ |   
 | Cálculo de descontos (10%, 15%, 20%) | ✅ |   
@@ -186,8 +184,7 @@ POST /api/v1/orders
  }  
    
 **IDs do Cardápio**  
-| | | | |  
-|-|-|-|-|  
+
 | **ID** | **Nome** | **Preço** | **Categoria** |   
 | 1 | X Burger | R$ 5,00 | Sandwich |   
 | 2 | X Egg | R$ 4,50 | Sandwich |   
@@ -260,8 +257,7 @@ Abra o arquivo api-tests.http no VS Code com a extensão [REST Client e clique e
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANElEQVR4nO3OQQmAUBBAwSf8GGLWDWFDY3ixgjcRZhLMNjNHdQYAwF9cq1rV/vUEAIDX7gcRXAQ2s/16gwAAAABJRU5ErkJggg==)  
 **🔒 Segurança**  
 O projeto mitiga ativamente as vulnerabilidades :  
-| | | |  
-|-|-|-|  
+
 | **OWASP** | **Vulnerabilidade** | **Mitigação implementada** |   
 | A01 | Broken Access Control | Endpoints sem dados sensíveis; sem autenticação exposta |   
 | A02 | Cryptographic Failures | Nenhum dado sensível armazenado; HTTPS em produção |   
@@ -290,9 +286,8 @@ Padrão HTTP para respostas de erro. Fornece type, title, status, detail e trace
 Logging estruturado (JSON em produção, legível no console em dev). Permite correlação por TraceId, integração fácil com Elasticsearch/Seq/CloudWatch.  
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANUlEQVR4nO3OMQ2AABAAsSNhZscYahheJwqQgQU2QtIq6DIze3UGAMBf3Gu1VcfXEwAAXrseoqcEQXyAWBgAAAAASUVORK5CYII=)  
 **🚧 O que ficou fora**  
-Por ser um desafio técnico com escopo definido, as seguintes funcionalidades foram conscientemente omitidas:  
-| | |  
-|-|-|  
+Por ser um desafio técnico com escopo definido, as seguintes funcionalidades foram conscientemente omitidas:
+
 | **Feature** | **Motivo da omissão** |   
 | **Banco de dados persistente** (EF Core + PostgreSQL) | A interface IOrderRepository está pronta para isso; optei por In-Memory para eliminar dependências de infra no setup |   
 | **Autenticação/Autorização** (JWT) | Não estava no escopo; a estrutura de middleware suporta adicionar |   
@@ -304,9 +299,7 @@ Por ser um desafio técnico com escopo definido, as seguintes funcionalidades fo
    
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANUlEQVR4nO3OMQ2AABAAsSNBCkLfE07YGfHAiAU2QtIq6DIzW7UHAMBfnGt1V8fXEwAAXrse4eQF6VhvmPsAAAAASUVORK5CYII=)  
 **📦 Tecnologias**  
-| | | |  
-|-|-|-|  
-| **Tecnologia** | **Versão** | **Uso** |   
+| Tecnologia  | Versão | Uso |   
 | .NET / ASP.NET Core | 8.0 LTS | API REST |   
 | Blazor WebAssembly | 8.0 | Frontend SPA |   
 | Serilog | 8.x | Logging estruturado |   
