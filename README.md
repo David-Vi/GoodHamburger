@@ -1,5 +1,5 @@
-**🍔 Good Hamburger — Sistema de Pedidos**  
-Sistema completo para gerenciamento de pedidos da lanchonete **Good Hamburger**, construído com  **Clean Architecture**,  **ASP.NET Core 8**,  **Blazor WebAssembly** e conformidade com o  **OWASP Top 10**.  
+🍔 Good Hamburger — Sistema de Pedidos
+Sistema completo para gerenciamento de pedidos da lanchonete **Good Hamburger**, construído com  **Clean Architecture**,  **ASP.NET Core 8**,  **Blazor WebAssembly e conformidade com o  OWASP Top 10.  
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANklEQVR4nO3OYQ1AABSAwc8mi5wvkwZyCKCAACr4Z7a7BLfMzFYdAQDwF+da3dX+9QQAgNeuB6feBdUJcyS2AAAAAElFTkSuQmCC)  
 **📋 Índice**  
 - [Funcionalidades](#anchor-1 "#anchor-1")  
@@ -15,7 +15,7 @@ Sistema completo para gerenciamento de pedidos da lanchonete **Good Hamburger**,
 - [Material para Aula](#anchor-11 "#anchor-11")  
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANElEQVR4nO3OQQmAABRAsSdYxKa/i8WMIR7ECt5E2BJsmZmt2gMA4C+Otbqr8+sJAACvXQ85PAYartXEogAAAABJRU5ErkJggg==)  
 **✅ Funcionalidades**  
-| **Requisito** | **Status** |   
+| Requisito | Status** |   
 | API REST CRUD de pedidos | ✅ |   
 | Cálculo de descontos (10%, 15%, 20%) | ✅ |   
 | Validação de itens duplicados | ✅ |   
@@ -143,14 +143,10 @@ HTTP Request
 **📡 Endpoints da API**  
 A documentação interativa completa está disponível em **http://localhost:5000** (Swagger UI).  
 **Cardápio**  
-| | | |  
-|-|-|-|  
 | **Método** | **Rota** | **Descrição** |   
 | GET | /api/v1/menu | Lista todos os itens do cardápio |   
    
 **Pedidos**  
-| | | |  
-|-|-|-|  
 | **Método** | **Rota** | **Descrição** |   
 | GET | /api/v1/orders | Lista todos os pedidos |   
 | GET | /api/v1/orders/{id} | Busca pedido por ID |   
@@ -195,9 +191,7 @@ POST /api/v1/orders
 **Testes manuais com REST Client**  
 Abra o arquivo api-tests.http no VS Code com a extensão [REST Client e clique em "Send Request" em cada bloco.](https://marketplace.visualstudio.com/items?itemName=humao.rest-client "https://marketplace.visualstudio.com/items?itemName=humao.rest-client")  
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAANUlEQVR4nO3OQQmAABRAsSdYxZ4/mJjEsxE8W8GbCFuCLTOzVXsAAPzFuVZ3dXw9AQDgtesBxPEF3bv7x0IAAAAASUVORK5CYII=)  
-**🏷️ Regras de Desconto**  
-| | |  
-|-|-|  
+**🏷️ Regras de Desconto**   
 | **Combinação** | **Desconto** |   
 | Sanduíche + Batata Frita + Refrigerante | **20%** |   
 | Sanduíche + Refrigerante | **15%** |   
@@ -309,6 +303,6 @@ Por ser um desafio técnico com escopo definido, as seguintes funcionalidades fo
 | Docker + nginx | latest/alpine | Containerização |   
    
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAACCAYAAAA3pIp+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAM0lEQVR4nO3OMQ0AIAwAwZKQ6kBqjSAOJywYYCIkd9OP36pqRMQMAAB+sfqJfLoBAMCN3NYoAzBA+QG0AAAAAElFTkSuQmCC)  
-**👤 Autor** **: David Viegas Mateus**  
-Desenvolvido como desafio técnico C#.  
+
+  
 # GoodHamburger
